@@ -1,0 +1,17 @@
+{
+  "files.autoSave": "onFocusChange", // optional but recommended
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": false, // required
+  "editor.formatOnType": false, // required
+  "editor.formatOnSave": true, // optional
+  "editor.formatOnSaveMode": "file", // required to format on save
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "eslint.options": {
+    "extensions": [".js", ".jsx", ".ts", ".tsx"]
+  },
+  "[mdx]": {
+    "editor.formatOnSave": false
+  }
+}
