@@ -12,12 +12,24 @@ const components = {
       className="text-5xl hover:underline hover:text-teal-400 hover:bg-gray-700"
     />
   ),
-  h1: (props: any) => <h1 className="text-7xl text-teal-400" {...props} />,
-  h2: (props: any) => <h2 className="text-5xl text-teal-400" {...props} />,
-  h3: (props: any) => <h3 className="text-3xl text-teal-400" {...props} />,
-  h4: (props: any) => <h4 className="text-xl text-teal-400" {...props} />,
-  h5: (props: any) => <h5 className="text-lg text-teal-400" {...props} />,
-  h6: (props: any) => <h6 className="text-base text-teal-400" {...props} />,
+  h1: (props: any) => (
+    <h1 className="md:text-7xl text-5xl text-teal-400" {...props} />
+  ),
+  h2: (props: any) => (
+    <h2 className="md:text-5xl text-3xl text-teal-400" {...props} />
+  ),
+  h3: (props: any) => (
+    <h3 className="md:text-3xl text-2xl text-teal-400" {...props} />
+  ),
+  h4: (props: any) => (
+    <h4 className="md:text-1xl text-xl text-teal-400" {...props} />
+  ),
+  h5: (props: any) => (
+    <h5 className="md:text-lg text-lg text-teal-400" {...props} />
+  ),
+  h6: (props: any) => (
+    <h6 className="md:text-base text-base text-teal-400" {...props} />
+  ),
   pre: (props: any) => {
     // There is a code block inside the pre block
     const defaultCodeLanguage = "rust";
@@ -26,7 +38,7 @@ const components = {
       codeBlock.props;
 
     return (
-      <div className="mx-8 my-4">
+      <div className="mx-2 my-4 md:mx-8">
         <SyntaxHighlighter
           // {...codeBlock.props}
           codeTagProps={{ className }}
@@ -49,7 +61,8 @@ const components = {
       {...props}
       className="text-yellow-600 bg-gray-700 rounded-lg p-1 italic"
     />
-  )
+  ),
+  p: (props: any) => <p {...props} className="text-xs md:text-base" />
 };
 
 export default function BlogPost({ code, meta }: { code: string; meta: Meta }) {
